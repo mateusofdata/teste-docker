@@ -9,7 +9,7 @@ let connection;
 app.get('/', (req, res) => {
   connection.query('show tables', (err, results) => {
     if (err) throw err;
-    res.send(`Database connection successful! 1 + 1 = ${results[0].solution}`);
+    res.send(`Database connection successful! 1 + 1 = ${results}`);
   });
 });
 
